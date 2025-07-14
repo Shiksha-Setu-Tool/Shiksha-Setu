@@ -27,7 +27,7 @@ function AppContent() {
     setCurrentPage(page);
   }, []);
 
-  const handlePlanSelection = (plan: 'free' | 'premium') => {
+  const handlePlanSelection = (_plan: 'free' | 'premium') => {
     // For now, just redirect to login/signup
     // In the future, this could handle different signup flows for different plans
     setCurrentPage('login');
