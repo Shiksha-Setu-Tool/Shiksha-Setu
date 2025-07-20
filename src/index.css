@@ -1,0 +1,138 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Performance optimization */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Performance optimization */
+  overflow-x: hidden;
+  /* Hardware acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Performance optimizations for smooth scrolling */
+html, body {
+  /* Enable hardware acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  
+  /* Optimize for scrolling */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize images and media */
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+  /* Performance optimization */
+  will-change: auto;
+}
+
+/* Reduce layout thrashing */
+* {
+  /* Prevent layout shifts */
+  contain: layout style paint;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    /* Use transform instead of changing layout properties */
+    transition-property: transform, opacity, color, background-color;
+  }
+}
+
+/* Fix cursor flickering issues */
+button, 
+a, 
+[role="button"],
+.btn,
+.btn-secondary {
+  cursor: pointer !important;
+  /* Prevent cursor changes on hover edges */
+  transition: all 0.2s ease;
+}
+
+button:hover, 
+a:hover, 
+[role="button"]:hover,
+.btn:hover,
+.btn-secondary:hover {
+  cursor: pointer !important;
+}
+
+button:active, 
+a:active, 
+[role="button"]:active,
+.btn:active,
+.btn-secondary:active {
+  cursor: pointer !important;
+}
+
+button:focus, 
+a:focus, 
+[role="button"]:focus,
+.btn:focus,
+.btn-secondary:focus {
+  cursor: pointer !important;
+  outline: none;
+}
+
+/* Prevent cursor changes on pseudo-elements */
+*::before,
+*::after {
+  cursor: inherit;
+  pointer-events: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+} 
