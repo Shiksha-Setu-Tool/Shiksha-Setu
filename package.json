@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Shiksha Setu - Bridging Educational Gaps with Personalized Learning",
-  "homepage": "https://yourusername.github.io",
+  "homepage": "https://shiksha-setu-tool.github.io/Shiksha-Setu",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
