@@ -29,6 +29,9 @@ Shiksha Setu empowers tutors to create personalized learning experiences that he
 - **User-Specific Data**: Each user can only access their own curriculums
 
 ### 🛠 Platform Features
+
+> Note: These describe the platform vision presented on the landing page. Currently only curriculum creation, viewing, and deletion are implemented; AI insights, progress tracking, content generation, and collaboration tools are not yet built.
+
 - **Personalized Curriculum**: Create tailored learning paths that adapt to each student's unique needs
 - **AI-Powered Insights**: Leverage artificial intelligence to identify learning gaps and suggest improvements
 - **Progress Tracking**: Monitor student advancement with detailed analytics and reporting
@@ -40,7 +43,7 @@ Shiksha Setu empowers tutors to create personalized learning experiences that he
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
+- Node.js (version 18 or higher)
 - npm or yarn
 - GitHub account (for deployment)
 - Firebase account (for backend services)
@@ -49,8 +52,8 @@ Shiksha Setu empowers tutors to create personalized learning experiences that he
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/shiksha-setu.git
-cd shiksha-setu
+git clone https://github.com/Shiksha-Setu-Tool/Shiksha-Setu.git
+cd Shiksha-Setu
 ```
 
 2. Install dependencies:
@@ -158,7 +161,7 @@ shiksha-setu/
 
 - **Firebase Firestore**: NoSQL database for curriculum storage
 - **User-Specific Data**: Each user's curriculums are isolated
-- **Real-time Updates**: Changes reflect immediately across sessions
+- **On-Load Fetching**: Curriculums are loaded from Firestore when the dashboard opens (no real-time sync)
 - **Secure Access**: Firebase security rules protect user data
 
 ## 🔧 Configuration
@@ -185,7 +188,6 @@ shiksha-setu/
 ### Firebase Integration
 - Authentication works seamlessly with GitHub Pages
 - Firestore database accessible from deployed site
-- Real-time data synchronization
 
 ## 🔒 Security
 
@@ -196,9 +198,7 @@ shiksha-setu/
 
 ## 📈 Monitoring & Analytics
 
-- **Firebase Analytics**: Track user engagement and app performance
-- **Error Monitoring**: Firebase Crashlytics for error tracking
-- **Performance Monitoring**: Firebase Performance for app speed insights
+Not currently integrated: the app only uses Firebase Authentication and Firestore (no Firebase Analytics, Crashlytics, or Performance Monitoring).
 
 ## 🤝 Contributing
 

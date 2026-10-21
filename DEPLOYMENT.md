@@ -11,7 +11,7 @@ This guide will help you deploy your Shiksha Setu application to GitHub Pages wi
 ## Step 1: Create GitHub Repository
 
 1. Go to [GitHub](https://github.com) and create a new repository
-2. Name it `shiksha-setu` (or your preferred name)
+2. Name it `Shiksha-Setu` (the Vite `base` in `vite.config.ts` is hardcoded to `/Shiksha-Setu/`)
 3. Make it public (required for GitHub Pages)
 4. Don't initialize with README (we already have one)
 
@@ -28,7 +28,7 @@ git add .
 git commit -m "Initial commit: Shiksha Setu platform"
 
 # Add your GitHub repository as remote
-git remote add origin https://github.com/YOUR_USERNAME/shiksha-setu.git
+git remote add origin https://github.com/Shiksha-Setu-Tool/Shiksha-Setu.git
 
 # Push to GitHub
 git branch -M main
@@ -41,15 +41,15 @@ git push -u origin main
 2. Update `src/firebase/config.ts` with your actual Firebase configuration
 3. Add your GitHub Pages domain to Firebase authorized domains:
    - Go to Firebase Console → Authentication → Settings → Authorized domains
-   - Add: `YOUR_USERNAME.github.io`
+   - Add: `shiksha-setu-tool.github.io`
 
 ## Step 4: Update Package.json
 
-Update the `homepage` field in `package.json`:
+The `homepage` field in `package.json` is already set:
 
 ```json
 {
-  "homepage": "https://YOUR_USERNAME.github.io/shiksha-setu"
+  "homepage": "https://shiksha-setu-tool.github.io/Shiksha-Setu"
 }
 ```
 
@@ -75,7 +75,7 @@ npm run deploy
 ## Step 7: Test Your Application
 
 1. Wait a few minutes for deployment to complete
-2. Visit your site: `https://YOUR_USERNAME.github.io/shiksha-setu`
+2. Visit your site: `https://shiksha-setu-tool.github.io/Shiksha-Setu/`
 3. Test the authentication features:
    - Try creating an account with email/password
    - Try logging in with Google
