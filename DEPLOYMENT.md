@@ -53,24 +53,16 @@ The `homepage` field in `package.json` is already set:
 }
 ```
 
-## Step 5: Deploy to GitHub Pages
-
-```bash
-# Install gh-pages if not already installed
-npm install gh-pages --save-dev
-
-# Deploy to GitHub Pages
-npm run deploy
-```
-
-## Step 6: Enable GitHub Pages
+## Step 5: Enable GitHub Pages
 
 1. Go to your GitHub repository
 2. Click "Settings" tab
-3. Scroll down to "Pages" section
-4. Under "Source", select "Deploy from a branch"
-5. Choose "gh-pages" branch and "/ (root)" folder
-6. Click "Save"
+3. Open the "Pages" section
+4. Under "Source", select "GitHub Actions"
+
+## Step 6: Deploy
+
+Deployment is automatic: the workflow in `.github/workflows/deploy.yml` runs `npm ci && npm run build` and publishes `dist/` to GitHub Pages on every push to `main`. You can also trigger it manually from the Actions tab ("Deploy to GitHub Pages" → "Run workflow"), or run `./quick-deploy.sh`, which builds locally and then pushes `main`.
 
 ## Step 7: Test Your Application
 
@@ -120,7 +112,7 @@ npm run deploy
 
 1. **Firebase Analytics**: Monitor user engagement and errors
 2. **Firebase Performance**: Track app performance
-3. **GitHub Pages**: Monitor deployment status and site health
+3. **GitHub Pages**: Monitor deployment status in the repository's Actions tab
 
 ## Next Steps
 

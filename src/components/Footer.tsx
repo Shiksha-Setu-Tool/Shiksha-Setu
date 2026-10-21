@@ -26,12 +26,6 @@ const Footer: React.FC = () => {
               <li style={{ marginBottom: '0.5rem' }}><a href="#about" style={{ color: 'white', textDecoration: 'none' }}>About</a></li>
             </ul>
           </div>
-          <div>
-            <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Contact</h4>
-            <p style={{ opacity: 0.8, marginBottom: '0.5rem' }}>Email: info@shikshasetu.com</p>
-            <p style={{ opacity: 0.8, marginBottom: '0.5rem' }}>Phone: +1 (555) 123-4567</p>
-            <p style={{ opacity: 0.8 }}>Address: Education Hub, Learning Street</p>
-          </div>
         </div>
         <div style={{ 
           borderTop: '1px solid rgba(255, 255, 255, 0.1)', 
@@ -39,7 +33,7 @@ const Footer: React.FC = () => {
           textAlign: 'center',
           opacity: 0.7
         }}>
-          <p>&copy; 2024 Shiksha Setu. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Shiksha Setu. All rights reserved.</p>
         </div>
       </div>
     </footer>

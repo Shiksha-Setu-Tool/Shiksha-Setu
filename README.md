@@ -85,9 +85,9 @@ npm run dev
 ./quick-deploy.sh
 ```
 
-2. **Manual Deploy**:
-   - Follow the detailed guide in `DEPLOYMENT.md`
-   - Or run: `npm run deploy`
+2. **Automatic Deploy**:
+   - Every push to `main` is built and deployed to GitHub Pages by the GitHub Actions workflow in `.github/workflows/deploy.yml`
+   - See `DEPLOYMENT.md` for details
 
 ## 🛠 Tech Stack
 
@@ -174,14 +174,14 @@ shiksha-setu/
 5. Set up security rules in Firestore
 
 ### GitHub Pages Setup
-1. Update `homepage` field in `package.json`
+1. Update `homepage` field in `package.json` (and `base` in `vite.config.ts` if the repo name differs)
 2. Add your domain to Firebase authorized domains
-3. Deploy with `npm run deploy`
+3. Set Settings → Pages → Source to "GitHub Actions", then push to `main`
 
 ## 🚀 Deployment
 
 ### GitHub Pages
-- Automatic deployment from `gh-pages` branch
+- Automatic deployment via GitHub Actions on every push to `main`
 - HTTPS enabled by default
 - Custom domain support available
 
@@ -210,7 +210,7 @@ Not currently integrated: the app only uses Firebase Authentication and Firestor
 
 ## 📄 License
 
-This project is licensed under the ISC License.
+This project is licensed under the ISC License. See [LICENSE](LICENSE).
 
 ## 📞 Support
 
